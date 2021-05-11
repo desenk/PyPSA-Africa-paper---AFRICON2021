@@ -55,17 +55,17 @@ Edinburgh, Scotland, United Kingdom \\
 \url{https://orcid.org/}}
 \and
 \IEEEauthorblockN{Matin Mahmood}
-\IEEEauthorblockA{\textit{Institute for Energy Systems} \\
+\IEEEauthorblockA{\textit{School of Informatics} \\
 \textit{University of Edinburgh}\\
 Edinburgh, Scotland, United Kingdom \\
-\href{mailto:xxxx@ed.ac.uk}{xxxx@ed.ac.uk} \\
+\href{mailto:M.Mahmood-3@sms.ed.ac.uk}{m.mahmood-3@sms.ed.ac.uk} \\
 \url{https://orcid.org/}}
 \and
-\IEEEauthorblockN{Maximillian Parzen}
+\IEEEauthorblockN{Maximilian Parzen}
 \IEEEauthorblockA{\textit{Institute for Energy Systems} \\
 \textit{University of Edinburgh}\\
 Edinburgh, Scotland, United Kingdom \\
-\href{mailto:max.parzen@sms.ed.ac.uk}{max.parzen@sms.ed.ac.uk} \\
+\href{mailto:max.parzen@ed.ac.uk}{max.parzen@ed.ac.uk} \\
 \url{https://orcid.org/0000-0002-4390-0063}}
 \and
 \IEEEauthorblockN{Aristides Kiprakis}
@@ -99,10 +99,10 @@ Africa, open access, open source software, electricity access, geospatial modell
 
 \section{Introduction}
 % \todo[inline]{Koen: personally, I would replace ``OS'' by ``open source'' everywhere. It doesn't save enough space to be worth the mental overhead of this abbreviation.}
-The open source (OS) models and open-modelling initiatives in Europe bridge the gap between policymaking and long-term planning performed by researchers. For developing countries including but not limited to the ones located in the African continent, it is essential to simulate long-term energy portfolio scenarios as economic viability, risk and return on investments are key for investments in electrification and integration of renewable energy sources (RES).
+The open source (OS) models and open-modelling initiatives in Europe bridge the gap between policymaking and long-term planning performed by researchers. For developing countries including but not limited to the ones located in the African continent, it is essential to simulate long-term energy generation and consumption scenarios as economic viability, risk and return on investments are key for investments in electrification and integration of renewable energy sources (RES).
 
 Even though there are existing OS models and modelling tools in literature, there is a gap in evaluating the existing work that focuses specifically on Africa which is rich in many different kinds of RES such as solar and wind.
-Here, we both review the existing work and also propose a roadmap to OS energy systems modelling in Africa.
+Here, we both provide a review of the most relevant work and also propose a roadmap to OS energy systems modelling in Africa.
 
 The main contributions of this paper are outlines below:
 \begin{itemize}
@@ -112,101 +112,166 @@ The main contributions of this paper are outlines below:
 
 
 \section{Review of the Existing Work, Initiatives and Motivation}
-In this section, firstly, we discuss the motivation for OS modelling in Africa and drivers in terms of rapid development such as interconnection projects between African countries. Secondly, the existing work is presented, reviewed and split into two categories which are academic and non-academic developments in energy systems planning for Africa.
+In this section, the motivation for OS modelling in Africa and drivers are outlined.
+% such as rapid urbanisation, increasing population and development plans such as interconnection projects between African countries 
+%%% WILL ADD REFERENCES HERE
+Following this, we summarise the most relevant non-academic projects that promote OS energy modelling in the African continent. In the second subsection, we review the academic literature that feature existing OS models and simulation tools used for either the whole continent or a location in Africa. Lastly, we conclude this section by highlighting the gap that our proposed model plans to address.
 
-\subsection{Motivation and existing projects for energy systems developments in Africa}
-There are numerous initiatives to increase electrification and develop the resilience of the grid in Africa. One of the well-known methods for increasing resiliency is using introducing interconnection between countries such as the one between the UK and France. Despite the more complex modelling, simulation and computational costs, the advantages include higher system inertia and more stable frequency. \Cref{interconnector} (presented in Conference on Power Transmission in Africa 2019) shows the projects for interconnections between various countries in Sub-Saharan Africa.
+\subsection{Motivation and non- academic existing projects for energy planning in Africa}
+The main motivation behind most African energy models is to project the increasing rate of electrification linked to the rapid urbanisation, economic development and population growth in the African continent. 
+% The case of Africa is interesting as... %cite some stats
+% Start with electrification rate..increasing population, increasing electrification rate, GHG emissions, etc. using stats from IEA and EU Energy projections for African countries \href{https://op.europa.eu/en/publication-detail/-/publication/5bfffb22-fe1d-11e9-8c1f-01aa75ed71a1/language-en}{\textbf{here}}
+
+In order to meet this predicted increase in electricity demand, respect limitations such as the green house gas (GHG) emissions and help implement the UN's Sustainable Development Goals (SDGs), the Paris Agreement and Africa´s Agenda 2063, different assets (e.g. wind turbines, batteries, etc.) and the African electricity transmission grid should be modelled. Additionally, other planned developments such as new transmission lines and similar should be taken into account in long-term energy modelling.
+% It both teaches and promotes the use of open source modelling tools to help implement . 
+
+% There are numerous initiatives to increase electrification and develop the resilience of the grid in Africa. One of the well-known methods for increasing resiliency is using introducing interconnection between countries such as the one between the UK and France. Despite the more complex modelling, simulation and computational costs, the advantages include higher system inertia and more stable frequency. 
+\Cref{interconnector} (presented in the Conference on Power Transmission in Africa in 2019) shows the interconnection projects between various countries in Sub-Saharan Africa. This is an example of many initiatives that attempt to increase the resiliency of the African grid in order to prepare for the predicted increase in electrical demand.
 
 \begin{figure}[t]
-\centerline{\includegraphics[width = 0.45\textwidth]{Figures/interconnector.jpg}}
-\caption{Interconnector projects in Africa [REF!].}
+\centerline{\includegraphics[trim =  0.2cm 0cm 3cm 1.15cm, clip,width = 0.45\textwidth]{Figures/interconnector.jpg}}
+\caption{Interconnector projects in Africa where red and blue denote feasibility and prefeasibility stages respectively. \footnote{1} }
 \label{interconnector}
 \end{figure}
 
+% \todo[inline]{Question from Max: Do we need this Figure? Maybe we can position the Africa and EU map somewhere on top to inspire further reading? Eventhough the Figure 2 and 3 are mentioned later, there subscript is self-explanatory.
+% Desen: I think it is necessary to include this - it explains the motivation. Can discuss it again once the first iteration is ready for a review.}
+% \subsection{Existing Non-Academic Initiatives}
+% In addition to the academic research and planned projects such as the ones shown in \autoref{interconnector}, there are also ongoing non-academic initiatives that promote OS modelling and energy development in the African continent.
+
+% \todo[inline]{Desen: Under construction - please do not review yet :)}
+
+In order to simulate the techno-economic benefits and costs of such planned developments and also test different RES policies, organisations such as the International Renewable Energy Energy Agency (IRENA),
+European Union (EU), International Energy Agency (IEA), United Nations Economic Commission for Africa (UNECA), African Climate Policy Centre (ACPC) and The World Bank Group (WBG) provide funding, modelling expertise and also promote use of OS modelling tools \cite{}.%cite: ACEC (IRENA), IEA, EMP-A
+
+To increase the contribution from RES, IRENA established the Africa Clean Energy Corridor (ACEC) initiative which highlights the significance of establishing the use of OS tools such as \emph{MESSAGE}. Using \emph{MESSAGE}, IRENA constructed several System Planning Test (SPLAT) models for 47 African countries. However, the SPLAT models focus on the analysis of zones that have a high solar and/or wind energy generation potential and have a resolution of 5 to 10-year time steps.
+% It is a medium to long-term planning software with a 5-year time step. It is used for analysing climate change mitigation policies and cost-minimal optimisation for green house gas emission limits in partnership with the World Energy Council and the Intergovernmental Panel on Climate Change. It is free for academic use only. 
+. % cite MESSAGE website - https://webarchive.iiasa.ac.at/Research/ENE/model/message.html
+% cite IRENA -  https://irena.org/-/media/Files/IRENA/Planning/IRENA_Modelling_support_Africa_2020.pdf?la=en&hash=C66FD1D23605A4F5065FBA47896EC55060A85B41
+% the International Institute for Applied Systems Analysis (IIASA) in Austria has been both the developer and maintainer since the 1980s.
 
 
-\subsection{Existing Non-Academic Initiatives}
+% \todo[inline]{Koen: where are the references for this? It's possible to create nice entries in the bibliography for technical reports.}
+
+Another significant initiative is the Energy Modelling Platform Africa (EMP-A) \footnote{http://www.energymodellingplatform.org/africa.html} which has many key contributors such as UNECA, ACPC, WBG, UK Department for International Development (DFID), United Nations Development Programme (UNDP) and more. They both promote and provide training for the use of two OS packages which are namely OSeMOSYS and OnSSET for energy investment planning and geospatial electrification mapping applications, respectively.
+
+For city-level modelling, the SAMSET project uses LEAPS which focuses the sustainable energy transition of six African cities in Ghana, Uganda and South Africa.
+
+Lastly,  the IEA's Energy Sub-Saharan Africa project, funded by the EU till 2023, aids Sub-Saharan African countries with their energy data management and long-term energy planning. Although this is a great initiative as it pledges for open-access country-level energy data which can be used by our proposed model, there is no physics-informed power flow analysis involved.
+
+To summarise, the main motivation behind continent-level OS modelling is to perform long-term analysis of planned projects such the interconnection example in \cref{interconnector}. Fuelled by the increase in economic development, urbanisation and population, the augmented electrical demand should be modelled and met from RES in order to comply with the UN's SDGs and the Paris Agreement.
+
+
+% \todo[inline]{Koen: EMP-A doesn't seem to be a modelling initiative so much as a forum / organisation doing some workshops. Actually, from the website it looks like they only ever organised one workshop in 2019. So what makes this significant?
+% Desen: I haven't finished writing this yet. It is not just events they organise that makes them significant, it is also the parties involved. FYI, they have several events since 2018 - let's revisit once it is ready - aiming for Sunday}
 \begin{itemize}
-\item Southern African Power Pool \href{https://globaltransmission.info/archive.php?id=36051}{\textbf{here}}
-\item EMP-A: Energy Modelling Platform Africa \href{http://www.energymodellingplatform.org/africa.html}{\textbf{here}}
-\begin{itemize}
-\item OS energy MOdelling SYStem (OSeMOSYS) \cite{howells-rogner-ea-2011}
-\item Geo-spatial Electrification Modelling [ref!]
-\end{itemize}
-\item 
-\item EU Energy projections for African countries \href{https://op.europa.eu/en/publication-detail/-/publication/5bfffb22-fe1d-11e9-8c1f-01aa75ed71a1/language-en}{\textbf{here}}
-\item Energy	futures	modelling	for	African	cities	– selecting	a	modelling	tool for the	SAMSET	project  \href{https://media.africaportal.org/documents/14Tait-etal-energy_futures_modelling.pdf}{\textbf{here}}
-\item Energy planning and modelling support in Africa \href{{https://irena.org/-/media/Files/IRENA/Planning/IRENA_Modelling_support_Africa_2020.pdf?la=en&hash=C66FD1D23605A4F5065FBA47896EC55060A85B41}}{\textbf{here}}
+% \item Southern African Power Pool \href{https://globaltransmission.info/archive.php?id=36051}{\textbf{here}}
+% \item EMP-A: Energy Modelling Platform Africa \href{http://www.energymodellingplatform.org/africa.html}{\textbf{here}}
+%   \begin{itemize}
+%   \item OS energy MOdelling SYStem (OSeMOSYS)
+    % \cite{howells-rogner-ea-2011}.
+%   \item Geo-spatial Electrification Modelling (OnSSET) \cite{mentis-howells-ea-2017}.
+%   \end{itemize}
+% The SAMSET project which focuses the sustainable enrgy transition of six African cities in Ghana, Uganda and South Africa
+% ``The SAMSET project aims to support six African cities in three countries –  – with sustainable energy transitions. One of the first steps in this project
+% is to develop an evidence base of their energy systems to support scenario-based planning
+% exercises to explore the impacts of different sustainable energy interventions. There are
+% various established modelling platforms available that are useful for different purposes.
+% Selecting an appropriate software tool must conform to the objectives and scope, as well
+% as the context of the study''
+% LEAP is for city-level energy modelling in
+% several cities across South Africa, including the City of Cape Town, Buffalo city, and the
+% municipality of eThekwini. In these cities, LEAP was used to create or compliment state of
+% energy reports and future energy scenarios – detailing the energy picture of the cities and
+% giving information about possible energy futures and their associated implications on
+% resources 
 
-\item open mod - working on specifically on the african continent
+% \item Energy	futures	modelling	for	African	cities	– selecting	a	modelling	tool for the	SAMSET	project  \href{https://media.africaportal.org/documents/14Tait-etal-energy_futures_modelling.pdf}{\textbf{here}}
+% \item Energy planning and modelling support in Africa \href{{https://irena.org/-/media/Files/IRENA/Planning/IRENA_Modelling_support_Africa_2020.pdf?la=en&hash=C66FD1D23605A4F5065FBA47896EC55060A85B41}}{\textbf{here}}
+
+% \item open mod - working on specifically on the african continent
 
 \end{itemize}
 
 \subsection{Existing Academic Work}
-\todo[inline]{Desen: My vision for this section is to highlight all the work done using other models categorising them into "local use of established energy modelling tools (that have a physics-based calculations)" such as Calliope in SA and Kenya (i.e. small application area, capable tool) and "wide-area application of GIS/non-physics-informed tools" such as the implementation of OnSSET in Africa, other tools in Sub-Saharan Africa. (i.e. large application area, non-physics-informed tool). The aim is to frame the existing work and highlight the gap of using a physics-informed electricity modelling tool (i.e. PyPSA) for the whole continent. The motivation for this is covered previously as interconnection plans exist and previous experience in Europe and especially the winter black-out in Texas show the importance of interconnection and resilience of the grid}
+% \todo[inline]{Desen: My vision for this section is to highlight all the work done using other models categorising them into "local use of established energy modelling tools (that have a physics-based calculations)" such as Calliope in SA and Kenya (i.e. small application area, capable tool) and "wide-area application of GIS/non-physics-informed tools" such as the implementation of OnSSET in Africa, other tools in Sub-Saharan Africa. (i.e. large application area, non-physics-informed tool). The aim is to frame the existing work and highlight the gap of using a physics-informed electricity modelling tool (i.e. PyPSA) for the whole continent. The motivation for this is covered previously as interconnection plans exist and previous experience in Europe and especially the winter black-out in Texas show the importance of interconnection and resilience of the grid}
+
+
+Energy systems models in Africa have the same purpose as elsewhere: in a nut shell, exploring development and expansion pathways of energy systems.
+One issue of particular importance to many regions in Africa is that of (rural) electrification, either by new grid connections or stand-alone options.
+Some models are technologically detailed, being based on OS frameworks such as OSeMOSYS~\cite{howells-rogner-ea-2011}, Calliope~\cite{pfenninger-pickering-2018} and PyPSA~\cite{brown-horsch-ea-2018}.
+Other models are based on extensive high-resolution data (demand, renewable generation potential, grid connections, etc.) and typically focus more exclusively on the question of electrification, e.g.\ models based on OnSSET~\cite{mentis-howells-ea-2017}.
+
+These two characteristics don't split existing work neatly into two categories.
+However, after the following brief literary review, we conclude that no model has been developed as of yet which is both technologically detailed \emph{and} models the entire African energy system at a high spatial resolution.
+This is the gap we propose to fill, and which will lead to a better understanding of continent-wide energy development in Africa.
+
+Mathematical modelling to map potential pathways for rural electrification is widespread, especially within the Global South~\cite{bertheau-cader-ea-2016,cader-blechinger-ea-2016,alfaro-miller-2021,rocco-fumagalli-ea-2021,anwar-deshmukh-ea-2020}.
+Geospatial electrification analysis combines GIS analysis with least cost technology planning approaches to map least cost electrification options where electricity access is low~\cite{mentis-howells-ea-2017,trotter-cooper-ea-2019}.
+This has been carried out at a country level in Sub-Saharan Africa including for Nigeria~\cite{mentis-siyal-ea-2017,nerini-broad-ea-2016,mentis-welsch-ea-2015}, Ethiopia~\cite{mentis-andersson-ea-2016}, Kenya~\cite{mentis-howells-ea-2017,szabo-moner-girona-ea-2016,mentis-welsch-ea-2015}, Uganda~\cite{trotter-cooper-ea-2019}, Burkino Faso and Cote d’Ivoire~\cite{bissiri-moura-ea-2020}, in Malawi~\cite{korkovelos-khavari-ea-2019} and in Tanzania~\cite{menghwani-zerriffi-ea-2020}.
+These case studies vary with respect to parameters used, though most include desired electricity target level and quality of access, population density, local grid connection status, existing electricity infrastructures, energy resource availability and cost of energy technologies in their assessments~\cite{menghwani-zerriffi-ea-2020}.
+The OnSSET model~\cite{mentis-howells-ea-2017,korkovelos-khavari-ea-2019} is especially popular as a spatial electrification analysis tool for Sub-Saharan Africa~\cite{rocco-fumagalli-ea-2021}.
+Recently, it has been used to create high resolution electrification models for every African country.
+The resulting pathsways can be explored in the Global Electrification Platform\footnote{\url{https://electrifynow.energydata.info/}}.
+
+At the same time, models have been developed for African regions which include transmission grid physics, optimal dispatch and storage operation, which OnSSET does not.
+These model the feasibility and operation of energy systems better, and allow us to study issues such as transmission bottlenecks and flexibility.
+Good examples include a model of the South African energy system based on PyPSA~\cite{horsch-calitz-2017} and a similar model (but focussed on concentrating solar power and nuclear power) based on Calliope~\cite{pfenninger-keirstead-2015}.
+A significant development is TEMBA, an OSeMOSYS-based energy system model for the entire African continent~\cite{taliotis-shivakumar-ea-2016}.
+It is used to study least-cost capacity expansion of generation and transmission on a continental scale.
+Another important recent innovation is the Dispa-SET Africa model~\cite{pavicevic-defelice-ea-2021}, a unit commitment and dispatch optimisation model.
+
+TEMBA is a large-scale capacity expansion model, but it's spatial resolution is limited to one node per country.
+Dispa-SET Africa, on the other hand, has a high spatial resolution.
+However, it is a rolling-horizon optimal dispatch model, and does not optimise capacity expansion.
+% Moreover, its modelling of energy transmission is highly simplified.
+We conclude that there is currently no large-scale high resolution model of the African energy system addressing the capacity expansion problem.
 
 
 
- However, geographical Information Systems (GIS) data is increasingly being utilised to better. The integration of GIS data into demand prediction and projection in models such as OSeMOSYS~\cite{howells-rogner-ea-2011}, e.g., in~\cite{rocco-fumagalli-ea-2021}, offer new potential to better understand demand needs.  
+% === UNUSED SOURCES ===
+% The following are worth considering for inclusion, but have been deemed not relevant enough.
+% \begin{itemize}
+% \item
+%   Calliope- Kenya: "is a five-region model of Kenya developed at Politecnico di Milano."  \url{https://github.com/SESAM-Polimi/Calliope-Kenya}. Technically an open model, but not actively developed, it doesn't look very serious and there is no publication or apparent application tied to it. A student project?
+% \item
+%   ``Regional Energy Supply Index (RESI): Using Open Source Data to Monitor Electricity Reliability across Sub-Saharan Africa'' \cite{kitetu-mbutura-2020}. Open data, yes, but doesn't relate to modelling.
+% \item
+%   Review: ``Next generation interactive tool as a backbone for universal access to electricity'' \cite{moner-girona-puig-ea-2018}. It's an interesting review of some electrification tools, but focusses more on the opportunity to include social factors. We are not yet there, and this paper is very much on the technical side. It's something to keep in mind.
+% \item
+%   ``PVMAPS: Software tools and data for the estimation of solar radiation and photovoltaic module performance over large geographical areas'' \cite{huld-2017}. Geospatial analysis of PV potential; should be atlite's job.
+%   ``Planning with justice: Using spatial modelling to incorporate justice in electricity pricing – The case of Tanzania'' \cite{menghwani-zerriffi-ea-2020}. Another model based on OnSSET. We have enough reference for OnSSET already.
+% \item
+%   ``Optimal management of storage for offsetting solar power uncertainty using multistage stochastic programming'' \cite{kaneda-scieur-ea-2018}. SDDP is really cool, but the MATLAB toolbox developed in this paper is really doing something quite different that what we are trying. The focus is on optimal management of small systems without perfect foresight, not on modelling the whole network.
+% \item
+%   ``Electricity infrastructure planning: Evaluating solar potential assessments for informal settlements using grass and freely available data'' \cite{hassim-coetzee-ea-2018}. Another PV potential study: no network modelling.
+% \item
+%   ``ICT for renewable energy integration into smart buildings: IoT and big data approach'' \cite{abid-lghoul-ea-2017}. This just looks like a really bad paper. Also no modelling.
+% \item
+%   ``Water and Energy Systems in Sustainable City Development: A Case of Sub-saharan Africa''  \cite{wang-vandam-ea-2017}. Kind of interesting, but the model is a little weird, doesn't model an electricity network, is limited to a small geographical scale and is apparently also not open.
+% \end{itemize}  
 
-Lighting the World: the first application of an open source, spatial electrification tool (OnSSET) on Sub-Saharan Africa
-\citet{mentis-howells-ea-2017} \cite{mentis-howells-ea-2017} implemented the first use of 
 
-
-\subsubsection{Least Cost Electrification Analysis}
-
-\todo[inline]{Koen: this section is under construction!}
-
-% Computer modelling to map potential pathways for rural electrification is widespread, especially within the Global South~\cite{bertheau-cader-ea-2016,cader-blechinger-ea-2016,alfaro-miller-2021,rocco-fumagalli-ea-2021,anwar-deshmukh-ea-2020}. Systematic reviews have sought to understand how different modelling tools, including HOMER Energy, Network Planner, and GEOSIM, calculate least cost electrification options for rural regions of Sub-Saharan Africa. Challenges exist with respect to the collection of data for input parameters such as population and electricity demand, especially for remote regions. There are additional complexities modelling decentralised options such as solar PV, diesel generation and hybrid mini-grids,  which require hourly simulations to ensure their economic and technological appropriateness to context~\cite{cader-blechinger-ea-2016}. A set of deficits relating to the use of modelling tools is identified in~\cite{cader-blechinger-ea-2016}, including: HOMER, which doesn’t consider stand-alone systems, Network Planner, which doesn’t model hydrid mini-grids and whose methodology promotes grid connection based on  proximity (regardless of topography or infrastructure), and GEOSIM, which despite incorporating constraints such as available investment and on-grid energy generation does not model solar hybrid mini-grids~\cite{cader-blechinger-ea-2016}.
-
-Geospatial electrification analysis combines GIS analysis with least cost technology planning approaches to map least cost electrification options where electricity access is low~\cite{mentis-howells-ea-2017,trotter-cooper-ea-2019}. This has been carried out at a country level in Sub-Saharan Africa including for Nigeria~\cite{mentis-siyal-ea-2017,nerini-broad-ea-2016,mentis-welsch-ea-2015}, Ethiopia~\cite{mentis-andersson-ea-2016}, Kenya~\cite{mentis-howells-ea-2017,szabo-moner-girona-ea-2016,mentis-welsch-ea-2015}, Uganda~\cite{trotter-cooper-ea-2019}, Burkino Faso and Cote d’Ivoire~\cite{bissiri-moura-ea-2020}, in Malawi~\cite{korkovelos-khavari-ea-2019} and in Tanzania~\cite{menghwani-zerriffi-ea-2020}. The OnSSET model is especially popular as a spatial electrification analysis tool for Sub-Saharan Africa. These case studies vary with respect to parameters used, though most include desired electricity target level and quality of access, population density, local grid connection status, existing electricity infrastructures, energy resource availability and cost of energy technologies in their assessments~\cite{menghwani-zerriffi-ea-2020}. A review of energy system modelling carried out in~\cite{rocco-fumagalli-ea-2021} finds increasing trends towards OS energy modelling (e.g., OnSSET) in Sub-Saharan Africa, highlighting tendencies towards aggregation of certain nationally specific data (such as investment, policy, and production efficiencies) across Sub-Saharan Africa or regionally (e.g., in East Africa). They also draw attention to issues associated with defining and predicting electricity demand for rural regions which homogenise rural energy users as a single user group. Energy modelling requires assumptions of energy demand so as to ensure appropriate choice and sizing of electrification option. However, issues have been identified with the processes of defining rural electricity demand, with some models homogenising rural energy users as a single user group irrespective of distance from the grid and population size. However, geographical Information Systems (GIS) data is increasingly being utilised to better. The integration of GIS data into demand prediction and projection in models such as OSeMOSYS~\cite{howells-rogner-ea-2011}, e.g., in~\cite{rocco-fumagalli-ea-2021}, offer new potential to better understand demand needs.  
-
-Agent-Based Modelling (ABM) is increasingly being applied to energy system modelling~\cite{alfaro-miller-2021,riva-colombo-2020}. It is utilised in~\cite{alfaro-miller-2021} to determine least cost options for rural electrification under scenarios of 100\% renewable energy generation. Recently, machine learning was utilised in~\cite{alova-trotter-ea-2021} to predict future electrification pathways and generation mixes in Africa. Further scope has also been identified with respect to developing energy system models for SSA which incorporate different energy storage technologies (see~\cite{musonye-davidsdottir-ea-2020}).
-\begin{itemize}
-\item \cite{schlott-schyska-ea-2020}. \todo[inline]{Koen: the relevance of this is questionable.}
-\item \cite{phongtrakul-kongjeen-ea-2018}. \todo[inline]{Koen: Is this relevant? It doesn't seem like such an interesting paper in our context or am I missing something?}
-\item OSeMOSYS~\cite{howells-rogner-ea-2011}.
-\item Lighting the World: the first application of an open source, spatial electrification tool (OnSSET) on Sub-Saharan Africa~\cite{mentis-howells-ea-2017} (already talked about above. - this is a specific application)
-\item \cite{menghwani-zerriffi-ea-2020} (A case study already mentioned above.)
-\item Calliope~\cite{pfenninger-pickering-2018}. \emph{NOTE (Koen): Anything more specific? Could include a brief listing of currently developed open energy system models?}
-
-\item \todo[inline]{Desen: This is what I had in mind - see South Africa and Kenya: https://www.callio.pe/model-gallery/
- (1) Calliope- Kenya: " is a five-region model of Kenya developed at Politecnico di Milano."  \url{https://github.com/SESAM-Polimi/Calliope-Kenya}
- (2) South Africa
-SA-Calliope was used in a peer-reviewed paper comparing concentrating solar power (CSP) and nuclear as baseload providers in South Africa. It contains commercially licensed data and is thus not freely and publicly available~\cite{pfenninger-keirstead-2015}.}
-
-\item Probably the most important academic existing work: TEMBA~\cite{taliotis-shivakumar-ea-2016}.
-\item ``Regional Energy Supply Index (RESI): Using Open Source Data to Monitor Electricity Reliability across Sub-Saharan Africa'' - ``There is a limited body of knowledge on the power quality issues affecting micro, small and medium enterprises (MSMEs) in Africa. Power quality monitoring studies in the past have previously focused on larger formal companies and have mostly relied on surveys to collect data. The purpose of this paper is to introduce the Regional Electricity Supply Index (RESI) that seeks to standardize the collection and real-time monitoring of power supply to MSMEs across Sub-Saharan Africa'' \cite{kitetu-mbutura-2020}.
-
-\item Review: ``Next generation interactive tool as a backbone for universal access to electricity'' - ``Energy planning in rural areas and in developing countries most often relies on the outputs of specialized analytical tools, of which only a handful have been developed. Over the years these tools have been upgraded, and the newest among them take into consideration, to a greater or lesser extent, all key determinants of energy generation and distribution. This article focuses on a “pool” of web-based geo-referencing open-source tools and highlights the extent to which each analytical tool reflects the particularities of the various determinants of energy generation and distribution. In doing so, the present work identifies aspects of the tools that need to be strengthened. Building on this information, the article further maps the suitability of each tool with regard to calculating (at a local level) the six Sustainable Development Goal indicators that are closely related to energy. This makes it possible to draw conclusions about monitoring needs in study-areas. Bringing together these two sets of findings, the article concludes with a research agenda for analytical tool development in the area of energy planning, which spills over developmental agendas'' \cite{moner-girona-puig-ea-2018}.
-  
-\item ``A geospatial assessment of small-scale hydropower potential in sub-saharan Africa'' - ``Sub-Saharan Africa has been at the epicenter of an ongoing global dialogue around the issue of energy poverty. More than half of the world's population without access to modern energy services lives there. It also happens to be a sub-continent with plentiful renewable energy resource potential. Hydropower is one of them, and to a large extent it remains untapped. This study focuses on the technical assessment of small-scale hydropower (0.01-10 MW) in Sub-Saharan Africa. The underlying methodology was based on open source geospatial datasets, whose combination allowed a consistent evaluation of 712,615 km of river network spanning over 44 countries. Environmental, topological, and social constraints were included in the form of constraints in the optimization algorithm. The results are presented on a country and power pool basis.'' \cite{korkovelos-mentis-ea-2018}.
-
-\item ``PVMAPS: Software tools and data for the estimation of solar radiation and photovoltaic module performance over large geographical areas'' - ``A set of computational tools and climatic data, tentatively named PVMAPS, is presented which makes it possible to calculate solar radiation and photovoltaic system power on inclined and/or sun-tracking surfaces over large geographical areas at arbitrarily high spatial resolution. Calculations of solar radiation and photovoltaic performance are done using validated models published in the scientific literature. The software has been implemented as modules in the open-source GRASS Geographical Information System and is delivered together with scripts to perform the calculations for any geographical region in the area covered by the data. The accompanying data set includes information about elevation, horizon height, average temperatures, solar radiation (direct and diffuse components) as well as data to calculate the effects of wind and spectral variations on PV performance. The geographical extent of the data at present includes Europe, Africa and most of Asia. All tools and data are freely available at no cost. '' \cite{huld-2017}.
-
-\item ``A geospatial approach towards defining cost-optimal electrification pathways in West Africa'' - ``West Africa holds some of the lowest electrification rates in sub-Saharan Africa with high disparities among countries and between urban and rural areas. Despite long-standing efforts to scale-up electrification levels, overall progress remains slow and highly cost-ineffective. Hence, it is crucial that electricity planning processes primarily address the questions of the complementarity between utility-scale and decentralised generation. This paper applies the Open Source Spatial Electrification Tool (OnSSET) to two ECOWAS countries – Burkina Faso and Côte d'Ivoire – with the aim of determining the optimal combination of grid-connected and off-grid systems to serve rural and urban demand by 2030, using high-resolution geospatial data. This country-wide analysis highlights the fundamental role of off-grid solar photovoltaics and wind technologies in bridging the electricity access gap, particularly in Burkina Faso. Additionally, cheaper electricity costs in Côte d'Ivoire could be taken advantage of through enhanced cross-border exchanges between the two countries.'' - 10.1016/j.energy.2020.117471
-\item ``Optimal management of storage for offsetting solar power uncertainty using multistage stochastic programming'' - ``Africa has recently engaged in implementing an aggressive renewable energy integration plan. A major challenge in the deployment of renewable power is the management of excess energy. The use of battery storage has been considered as a technically attractive solution. This paper tackles this operational problem using stochastic dual dynamical programming. We present an open-source MATLAB toolbox for multistage stochastic programming which employs stochastic dual dynamic programming. We use the toolbox in order to compare the stochastic solution to a greedy policy which operates batteries without future foresight as a benchmark. We consider a case study of storage management in Burkina Faso. We quantify the benefits of the stochastic solution and test the sensitivity of our results to the optimization horizon of the stochastic program.  '' \cite{kaneda-scieur-ea-2018}.
-  
-\item ``Electricity infrastructure planning: Evaluating solar potential assessments for informal settlements using grass and freely available data'' - ``Informal settlements, also known as slums or shanty towns, are characterised by rapid and unstructured expansion, poorly constructed buildings, and in some cases, they are on disputed land. Such settlements often lack basic services, such as electricity. As a result, informal settlement dwellers turn to hazardous alternative sources of energy, such as illegal electricity connections and paraffin. Solar power is a clean and safe alternative. However, informal settlements are often located on undesirable land on the urban fringe where the topography may hinder the use of solar energy. The high density of dwellings could also be a hindrance. Therefore, the solar potential needs to be assessed before any implementations are planned. Solar potential assessment functionality is generally available in geographic information system (GIS) products. The nature, cost and accessibility of datasets required for the assessment vary significantly. In this paper, we evaluate the results of solar potential assessments using GRASS (Geographic Resources Analysis Support System) for a number of different datasets. The assessments were done for two informal settlements in the City of Tshwane (South Africa): Alaska, which is nestled on a hill; and Phomolong, a densely populated settlement with a rather flat topography. The results show that solar potential assessments with open source GIS software and freely available data are feasible. This eliminates the need for lengthy and bureaucratic procurement processes and reduces the financial costs of assessing solar potential for informal settlements.'' \cite{hassim-coetzee-ea-2018}
-
-\item ``ICT for renewable energy integration into smart buildings: IoT and big data approach'' - ``SG (Smart Grids) are emerging as a very promising technology with buildings as one of its most critical components. SG are meant to leverage energy-efficiency and promote green usage via efficient renewable energy integration. SG pose inherent challenges stemming, mainly, from its inter-disciplinary nature. Besides ICT (Information and Communication Technology), SG involves two other broad disciplines: 1. Power systems and 2. Control systems. Still, ICT is the major component that manifests SG ' Smartness'. In this work, we present the architecture of a real-world smart micro-grid testbed to be deployed in a university campus. We highlight its main components with an emphasis on the ICT component. We are advocating that SG will utilize Internet of Things (IoT) to source all types of data, and thus making the whole system fall within the realm of Big Data. To handle the huge amount of data that will be collected, we advise the deployment of a private local Cloud using open source platform for HPC (High-Performance-Computing) along with Hadoop/MapReduce as the underlying data storage and processing model. We deem this project as an ideal blueprint that can be easily adopted for similar real-world smart micro-grid testbeds in Africa and around the world.'' \cite{abid-lghoul-ea-2017}.
-  
-\item ``Water and Energy Systems in Sustainable City Development: A Case of Sub-saharan Africa'' - ``Current urban water and energy systems are expanding while increasing attention is paid to their social, economic and environmental impacts. As a research contribution that can support real-world decision making and transitions to sustainable cities and communities, we have built a model-based and data-driven platform combining comprehensive database, agent-based simulation and resource technology network optimization for system level water and energy planning. Several use cases are demonstrated based on the Greater Accra Metropolitan Area (GAMA) city-region in Ghana, as part of the Future Cities Africa (FCA) project. The outputs depict an overall resource landscape of the studied urban area, but also provide the energy, water, and other resource balance of supply and demand from both macro and micro perspectives, which is used to propose environmental friendly and cost effective sustainable city development strategies. This work is to become a core component of the resilience.io platform as an open-source integrated systematic tool gathering social, environmental and economic data to inform urban planning, investment and policy-making for city-regions globally. '' \cite{wang-vandam-ea-2017}.
-\end{itemize}
-
-\newpage
 \section{Roadmap to an Open Energy System Model for Africa}
 
-The \emph{PyPSA meets Africa} project aims to construct the first high resolution open model of the African energy system using open data.
-We are building an automated, modular and reproducible workflow based on PyPSA.
+The \emph{PyPSA meets Africa} project aims to construct the first high resolution open model of the African energy system capable of optimal capacity expansion. We are building an automated, modular and reproducible workflow based on PyPSA (Python for Power System Analysis).
 
-PyPSA (Python for Power System Analysis)~\cite{brown-horsch-ea-2018} an OS modelling framework with a significant number of active users.
+% \todo[inline]{Koen: we might need to qualify the above a little bit more. Dispa-SET is such a model, and it is high-resolution. The difference is that it is a ``dispatch'' model, occupying a different niche in the energy systems modelling world. It's a little more technical, but here is an alternative paragraph:
+
+% The \emph{PyPSA meets Africa} project aims to construct the first high resolution open model of the African energy system capable of optimal capacity expansion.
+% We are building an automated, modular and reproducible workflow based on PyPSA and using open data. Max opinion: sounds good - well done Koen spotting this.}
+
+PyPSA~\cite{brown-horsch-ea-2018} is an OS modelling framework with a significant number of active users.
 It is used for capacity expansion and dispatch optimisation of energy systems.
 A principle feature of PyPSA is relatively detailed modelling of optimal power flow in transmission networks.
-This makes PyPSA well suited to large-scale models including conventional and renewable energy sources, storage technologies as well as energy carries including natural gas and hydrogen.
+This makes PyPSA well suited to large-scale models including conventional and renewable energy sources, storage technologies as well as energy carriers including natural gas and hydrogen.
 % PyPSA is therefore well suited for integrated models containing conventional energy sources like fossil-driven power plants, variable renewable energy sources like wind and solar, storage technologies like batteries as well as other energy carriers like natural or hydrogen gas as well as heating/cooling and mobility services.
-Prominent examples of PyPSA-based models are PyPSA-Eur~\cite{PyPSAEur}, a high resolution optimisation mode of the European transmission grid, and PyPSA-Eur-Sec~\cite{PyPSAEurSec}, an extension of the former which includes sector coupling.
-An example of an optimised system produced by PyPSA-Eur is shown in \autoref{EU-Map}.
+Prominent examples of PyPSA-based models are PyPSA-Eur~\cite{PyPSAEur}, a high resolution optimisation model of the European transmission grid, and PyPSA-Eur-Sec~\cite{PyPSAEurSec}, an extension of the former which includes sector coupling.
+
+An example of an optimised system produced by PyPSA-Eur is shown in \autoref{EU-Map}. It gives an vision of a possible results in the African model based on PyPSA.
+% \todo[inline]{Desen: What is the conclusion from this figure? What question did we answer here? For someone unfamiliar with this, it is hard to tell.
+% Note from Max: I tried to make it clear now. EU-map is there that readers can envision of what is planned for Africa.
+% }
 
 % \begin{figure}[htbp]
 % \centerline{\includegraphics[width = 0.5\textwidth]{Figures/EU-generation-map2.pdf}}
@@ -216,8 +281,8 @@ An example of an optimised system produced by PyPSA-Eur is shown in \autoref{EU-
 
 %%%% VERSION TWO
 \begin{figure}[htbp]
-\centerline{\includegraphics[trim={0cm 0cm 0cm 3cm},clip,width = 0.5\textwidth]{Figures/EU-generation-map.pdf}}
-\caption{Optimal generation, storage and network expansion in Europe under a 100\% emission reduction scenario and technology data for 2030. Light grey lines showing the existing installed network capacity~\cite{parzen-neumann-ea-2021}.}
+\centerline{\includegraphics[trim={0cm 0.1cm 0cm 3cm},clip,width = 0.5\textwidth]{Figures/EU-generation-map.pdf}}
+\caption{PyPSA-Eur outputs to envision planned achievements in the future African model. Map showing optimal generation, storage and network expansion in Europe under a 100\% emission reduction scenario and technology data for 2030. Light grey lines showing the existing installed network capacity~\cite{parzen-neumann-ea-2021}.}
 \label{EU-Map}
 \end{figure}
 
@@ -225,7 +290,7 @@ An example of an optimised system produced by PyPSA-Eur is shown in \autoref{EU-
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[trim={4cm 8cm 4cm 8cm},clip,width = 0.5\textwidth]{Figures/africa_transmission_network_and_substations.png}}
-\caption{Map of transmission lines and substations. Lines show planned and existing transmission lines over 110 kV in Africa and the MENA region. Substations show existing assets for Africa. Data available at https://energydata.info/dataset/africa-electricity-transmission-and-distribution-grid-map-2017 \& OpenStreetMap}.
+\caption{The map suggest that a large amount of transmission line and substation data is available in Africa. However, the data should be extended and validated as far as possible which can be accomplished in future endeavours. Blue lines show planned and existing transmission lines over 110 kV in Africa and the MENA region. Orange marked points show existing substations on transmission level. Data is available at https://energydata.info/dataset/africa-electricity-transmission-and-distribution-grid-map-2017 \& OpenStreetMap}.
 \label{AfricaMApTransmission}
 \end{figure}
 
@@ -248,7 +313,7 @@ The project is split into multiple work packages which are layed out in the next
 \begin{enumerate}
     \item Demand modelling
     \item Conventional generator modelling
-    \item Wind, solar, marine energy resource modelling
+    \item RES modelling
     \item Land coverage constraint modelling
     \item Network and substation modelling
     \item Data creation and validation 
@@ -256,10 +321,11 @@ The project is split into multiple work packages which are layed out in the next
 
 We aim to complete a working prototype of our model by end of 2021.
 
-\subsection{Demand modelling} %%% Johannes
-Electricity demand and time-series will be modelled using GEGIS (GlobalEnergyGIS).
-GEGIS applies a machine learning approach based on existing electricity demand time-series data, population densities and spatially resolved income data.
-This data is complemented with scenario information from the SSP (Shared Socioeconomic Pathways) and ERA5 reanalysis weather data to generate hourly resolved time-series for arbitrary regions for arbitrary years until 2050.
+\subsection{Demand modelling} %%% Johannes. Desen reviewed
+In order to model the electricity consumption, GlobalEnergyGIS (GEGIS) will be employed to obtain a hourly time-series of demand.
+GEGIS applies a machine learning (ML) approach based on existing electricity demand time-series data, population densities and spatially resolved income data.
+This data is complemented with scenario information from the Shared Socioeconomic Pathways (SSP) and weather data from ERA5 to generate hourly outputs for arbitrary regions until 2050.
+
 % \todo[inline]{I haven't checked the following sentence and can neither confirm nor deny its correctness.}
 % GEGIS follows the open GIS standards of the Open Geospatial Consortium and is operated as shown in \cref{GEGIS}.
 
@@ -270,34 +336,45 @@ This data is complemented with scenario information from the SSP (Shared Socioec
 % \label{GEGIS}
 % \end{figure}
 
-\subsection{Conventional generator modelling} %%% Koen
-Power plant data is available through the Global Power Plant Database~\cite{globalenergyobservatory-google-ea-2018}, which as regarded as one of the principle open global databases.
-Commercial power plant databases have historically dominated in policy and research, but in recent years open databases are closing the gap.
-For conventional generation (coal, natural gas, oil, hydro), the Global Power Plant Database has a coverage of 80--100\% (depending on the category) in terms of installed capacity, as compared to state-of-the-art commercial sources~\cite{byers-friedrich-ea-2019}.
+\subsection{Conventional generator modelling} %%% Koen. Desen reviewed
+Regarding the modelling of conventional generators, data is made available through the Global Power Plant Database (GPPD)~\cite{globalenergyobservatory-google-ea-2018}, which is one of the principle open global power plant databases.
+Commercial power plant databases with restricted access historically was dominant in policy-making and research, but in recent years open databases are closing the gap.
+For conventional generation (i.e. coal, natural gas, oil, hydro), the GPPD has a coverage of 80--100\% (depending on the category) in terms of installed capacity, when compared to the state-of-the-art commercial sources~\cite{byers-friedrich-ea-2019}.
 
-Moreover, the database can be integrated with PyPSA using the `powerplantmatching' tool~\cite{gotzens-heinrichs-ea-2019}.
-Using the powerplantmatching package makes it easy to integrate other power plant databases, and matches power plants between the various databases being used.
-As such, our model can incorporate new and improved datasets as they become available without much effort.
+The database can be integrated with PyPSA using the \emph{powerplantmatching} tool~\cite{gotzens-heinrichs-ea-2019}.
+Additionally, it also enables integration with other databases.
+As such, our model can incorporate new and improved datasets as they become available.
 
-\subsection{RES generator modelling} %%% Johannes
-RES (Renewable Energy Sources) will likely be the cornerstone of most future energy systems.
-For this project spatially resolved potentials and hourly resolved time-series for energy generation from wind, solar and ocean sources will be modelled using established and updated methodologies with the Python package \emph{atlite}\footnote{\url{https://github.com/PyPSA/atlite}}.
+Hydro power plays an important role in Africa, and is expected to continue doing so.
+While the GPPD includes data on existing hydro plants, we can also use existing geospatial analyses~\cite{korkovelos-mentis-ea-2018} of the potential for new hydro plants.
+
+
+\subsection{RES generator modelling} %%% Johannes. Desen reviewed
+In terms of RES modelling, the project aims to model both the existing and planned generators. As widely known, weather data such as wind speed/direction and solar irradiation play an important role in RES modelling. Using \emph{Atlite}\footnote{\url{https://github.com/PyPSA/atlite}} package, spatially resolved potentials and hourly time-series of wind, solar and ocean data are modelled into generation output from different plants. 
+
+Currently, \emph{atlite} supports wind turbines and solar PV as generators and uses ERA5 (i.e. hourly estimates of atmospheric and oceanic climate variables) complemented with irradiation data from SARAH2.
+% \todo[inline]{Desen: I think we need a ref for ERA5 and SARAH2 so that the reader can access this info. This can be the Atlite docs - https://atlite.readthedocs.io/en/latest/}
+The project aims to increase the variety of RES models to include CSP and marine energy like wave or tidal generators.
+
+% RES will likely be the cornerstone of most future energy systems.
+% For this project, spatially resolved potentials and hourly resolved time-series for energy generation from wind, solar and ocean sources will be modelled using established and updated methodologies with the Python package \emph{atlite}\footnote{\url{https://github.com/PyPSA/atlite}}.
 %TODO: add a reference for atlite. See https://github.com/openjournals/joss-reviews/issues/3204 for the issue at JOSS.
 % Unfortunately, it looks the paper is not going to go into preprint before our submission deadline. The URL should do for now, and hopefully we can cite it in the final version of this paper.
-Currently atlite supports wind turbines and photovoltaic as energy sources and uses world-wide available reanalysis data from the ERA5 complemented with irradiation data from SARAH2.
-With this project the variety of energy sources is to be expanded to include concentrated solar power (CSP) and ocean energy sources like wave or tidal energy generators.
 
-\subsection{Land coverage constraint modelling}
-Land use and protected areas constrain the eligible areas for RES deployment.
-Determining land constraints and considering land use for Similarly, any constraints on the surface will be modelled using Atlite.
-\begin{itemize}
-\item water depth we can include/exclude based on the GEBCO bathymetric dataset. Also used in PyPSA-EUR
-	land usage/coverage/protected areas (tool): 
-\item Can be exlucded using atlite. Severin Rydberg created GLAES for this purpose a few years ago but that tool is no longer maintained so Fabian Hofmann from the atlite team included that functionality into atlite recently.
+\subsection{Land coverage constraint modelling} %% Desen
+Different types of land use, extreme terrain conditions and protected areas constrain the eligible areas for RES development, placement of transmission lines, etc. Both land and sea/ocean constraints can be integrated in \emph{atlite}. In addition to the oceanic climate factors, water depth is a constraint for offshore and marine energy turbines where bathymetric dataset will be obtained from General Bathymetric Chart of the Oceans (GEBCO). Protected areas such as national parks will be researched and integrated into the model which provides an aspect of novelty. Population distribution and land cover surveys such as Corine Land Cover can be used to indicate regions with high population densities, farm land, extreme terrain, etc.
+
+% \todo[inline]{Desen: needs reference for GEBCO, etc.}
+
+
+% \begin{itemize}
+% % \item water depth we can include/exclude based on the GEBCO bathymetric dataset. Also used in PyPSA-EUR
+% % 	land usage/coverage/protected areas (tool): 
+% % \item Can be exlucded using atlite. Severin Rydberg created GLAES for this purpose a few years ago but that tool is no longer maintained so Fabian Hofmann from the atlite team included that functionality into atlite recently.
 	
-\item land usage/coverage/protected areas (data): This is were it becomes tricky.
-\item  Maybe global corine is suitable for land usage. Protected areas would still need to be included somehow. Potentially also population density (were again I know datasets exist but I do not know how applicable they are)
-\end{itemize}
+% % \item land usage/coverage/protected areas (data): This is were it becomes tricky.
+% \item  Maybe global corine is suitable for land usage. Protected areas would still need to be included somehow. Potentially also population density (were again I know datasets exist but I do not know how applicable they are)
+% \end{itemize}
 
 
 % Ok, here are just my thoughts, can someone else assist with selection/formulation?
@@ -308,23 +385,22 @@ Determining land constraints and considering land use for Similarly, any constra
 % * Niclas Mattsson used with GEGIS also some datasets and he managed world-wide coverage. Maybe we find our answer there already?
 % * Yes, modelling with Atlite should be possible
 
-\subsection{Network and substation modelling} 
+\subsection{Network and substation modelling} %%% Max and Matin. Not yet reviewed
 The network topology for Africa will mainly be extracted from a dataset compiled by the World Bank Group~\cite{arderne-2017}, which is based on a number of different sources. The dataset includes 1818 inputs for transmission lines (above 110 kV), the total length is 4204 km. Similar to PyPSA-Eur\cite{PyPSAEur}, the mapped data will be enriched by typical physical parameters such as length dependent resistance and reactance, current thermal level and apparent power limit.
 
 The substation geolocation with voltage level will be extracted from Open Street Maps (OSM). To be computable on typical 16GB RAM computers, a relatively new efficient OSM extraction package `esy-osmfilter'~\cite{pluta-lunsdorf-2020} will be applied that is four times faster than the common alternative, OSMOSIS~\cite{henderson-2020}. Initial results from the OSM extraction process (see result in \cref{AfricaMApTransmission}) show 2721 transmission substation data points for Africa.
 
 As for PyPSA-Eur, the country shapes and bus location will be used to split areas into Voronoi cells which are assumed to be connected to low voltage networks. Each of the Voronoi cell contains information on existing power plant capacities, renewable resource potential timeseries, as well as demand timeseries at the substation location. The spatial model resolution can be changed by aggregating the cells by k-means clustering.
 
-\subsection{Data creation and validation}
+\subsection{Data creation and validation} % Max and Matin. Desen reviewed.
 
-The amount of data on energy assets might vary per country (see \cref{AfricaMApTransmission}), reducing the usefulness and accuracy of energy system models. The missing data can be either added by energy authorities sharing data or by satellite imaginary asset recognition techniques. From experience in Europe, not even official data provided from large association such as the European Network of Transmission System Operator (ENTSO-E) are not fully reliable and might take some time to be updated\cite{gotzens-heinrichs-ea-2019,PyPSAEur}. Therefore, to validate existing and new authority energy assets data, and to add new data, machine learning offers unique opportunities. 
+The amount of data on energy assets might vary per country (see \cref{AfricaMApTransmission}). The missing data can be either added by local energy authorities or using asset recognition techniques on satellite imagery. It is known that data from centralised organisation such as the European Network of Transmission System Operator (ENTSO-E) may be out-of-date or unreliable \cite{gotzens-heinrichs-ea-2019,PyPSAEur}. Therefore, ML techniques can be applied to both validate existing data and create new data from satellite images.
 
-Machine Learning (ML) techniques will be used to create missing data and increase human validation speed by at least 33-fold compared to pure human mapping strategies~\cite{developmentseed-2018}. ML approaches should not be seen in near future to replace a human validation step as the accuracy is not satisfactory. However, ML approaches are an ideal complement to current mapping techniques and can speed up the human validation process, for instance, by providing only images that are highly likely to contain the specific energy asset. ML techniques were applied to recognise from satellite imaginary high voltage lines, substations~\cite{developmentseed-2018}, solar PV \cite{dehoog-maetschke-ea-2020} and wind turbines~\cite{zhou-irvin-ea-2019}.
+In the concept of electricity grid, ML can be used to create missing data and increase manual validation speed by at least 33-fold compared to  manual mapping strategies~\cite{developmentseed-2018}. 
+% ML approaches should not be seen in near future to replace a human validation step as the accuracy is not satisfactory. However, ML approaches are an ideal complement to current mapping techniques and can speed up the human validation process, for instance, by providing only images that are highly likely to contain the specific energy asset. 
+Using ML techniques, high voltage lines, substations~\cite{developmentseed-2018}, solar PV \cite{dehoog-maetschke-ea-2020} and wind turbines~\cite{zhou-irvin-ea-2019} were identified from satellite imagery. This involves creating a training data set which consists of marking energy assets on the images. Once the algorithm is trained, it is able identify the chosen energy asset in several other images. The information gained from ML can be, for instance, area and inclination of PV arrays that may be used to estimate their annual energy output. Other physical parameters such as voltage level of substations and age of assets might be also possible to extract by training ML on specific substation data and analysing satellite images over multiple years.
 
-\todo[inline]{Add. Example of what is possible with ML. Detect between different assets. I.e. high and low voltage assets, add physical parameters and check the age of assets (by assessing satellite data over multiple years) - Max}
-
-
-The 'PyPSA meets Africa' project will focus first to create validated substation and high voltage line datasets. These datasets will be made publicly available in line with the OS modelling goal. The work should be extended on other energy assets in future.
+The 'PyPSA meets Africa' project prioritises the creation of validated substation and high voltage line datasets which will be made publicly available in line with the OS approach. There are plans to use ML for identification of other energy assets in the future.
 
 \section{Conclusions}
 In this paper, we discussed the importance of OS energy systems modelling in the African continent. The existing work in terms of both academic literature, technical reports (e.g. by United Nations) and grass roots initiatives were reviewed. Lastly, we also presented our proposed roadmap to open energy modelling and data sharing in Africa which is aimed to have a wider audience with further integrated technologies such as marine energy and grid-scale batteries scheduled to increase the resiliency of the African grid \cite{}. This is expected to accelerate the simulation and hence, later integration of renewable energy technologies.
@@ -337,7 +413,7 @@ All funding bodies and everyone who helped improve the paper but did not contrib
 % \printbibliography
 
 \bibliographystyle{IEEEtran}
-\todo[inline]{Papers  that  have  not  been  published,even  if  they  have  been  submitted  for  publication,  should  becited as “unpublished” [4]. Papers that have been accepted forpublication should be cited as “in press” [5]}
+% \todo[inline]{Desen: Papers  that  have  not  been  published,even  if  they  have  been  submitted  for  publication,  should  be cited as “unpublished” [4]. Papers that have been accepted for publication should be cited as “in press” [5]}
 \bibliography{bibliography}
 
 \end{document}
